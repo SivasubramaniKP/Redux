@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experiment 0</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="title">
-        <h2>Login To Dashboard</h2>
-        <h3>Fill the below form to login</h3>
-        <div class="Oaith">
-            <button>Sign in With Google</button>
-            <button>Sign in with Apple</button>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">
+        <h2 class="fugaz-one-regular">Login To Overflow</h2>
+        <hr />
+        <h3 class="roboto">Fill the below form to login</h3>
+        <div class="Oauth">
+          <button class="inter signin">
+            <img src="./src/google.svg" class="logo" />
+            Sign in with Apple
+          </button>
+          <button class="inter signin">
+            <img src="./src/apple.svg" class="logo" />
+            Sign in with Apple
+          </button>
         </div>
-        <hr>
-        <h3>Email</h3>
-        <input type="text" name="Email" id="Email"/>
-        <h3>Password</h3>
-        <input type="password" name="Password" id="Password">
-        <a href="./forgetPassword">Forget Password?</a>
-        <br>
-        <button>Submit</button>
-
+        <hr />
+        
+        <h3 class="roboto">Email</h3>
+        <div class="inputContainer">
+          <input type="email" name="Password" id="Email" class="inter"/>
+        </div>
+        <h3 class="roboto">Password</h3>
+        <input type="password" name="Password" id="Password" class="inter"/>
+        <a class="forgotPassword roboto" href="./forgetPassword"
+          >Forget Password?</a>
+        <br />
+        <div class="buttonWrapper">
+          <button class="roboto submit">Submit</button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
