@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Overflow Form</title>
+</head>
+<body>
+    <h1>Redux Overflow Form</h1>
+    <form action="/submit" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="birthdate">Birthdate:</label><br>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="india">India</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="question">Your Question:</label><br>
+        <textarea id="question" name="question" rows="4" cols="50" placeholder="Type your question here..."></textarea><br><br>
+
+        <label>Tags:</label><br>
+        <input type="checkbox" id="javascript" name="tags" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <input type="checkbox" id="python" name="tags" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="html" name="tags" value="HTML">
+        <label for="html">HTML</label><br><br>
+
+        <label for="upload">Upload File:</label><br>
+        <input type="file" id="upload" name="upload"><br><br>
+
+        <label for="rating"></label><br>
+        <input type="range" id="rating" name="rating" min="1" max="10"><br><br>
+
+        <label for="time">Preferred Time for Support:</label><br>
+        <input type="time" id="time" name="time"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
