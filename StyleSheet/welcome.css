@@ -1,0 +1,51 @@
+/* Global Styling */
+body {
+    background: tomato;
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aliceblue;
+}
+
+/* Wrapper Styling */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    border: 3px solid black;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    box-shadow: 0px 0px 1000px 2px #fbff00;
+    text-align: center;
+}
+
+/* Welcome Page Text Styling */
+h1 {
+    font-size: 2em;
+    color: aliceblue;
+    margin-bottom: 1em;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+/* Table Styling for Displaying Data */
+#userData p {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
