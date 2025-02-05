@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes Explained</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 3px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Attributes: `readonly`, `hidden`, `sessionStorage`, and `refresh`</h1>
+
+    <section>
+        <h2>1. `readonly` Attribute</h2>
+        <p>The <code>readonly</code> attribute is used in form elements like <code>input</code> and <code>textarea</code>. When set, it makes the input field or textarea unmodifiable, meaning the user cannot change the content. However, the content can still be submitted in a form.</p>
+        <p>Example:</p>
+        <input type="text" value="You cannot change this" readonly><br><br>
+        <input type="text" value="Editable text"><br><br>
+        <p>Explanation: The first input is read-only, so users cannot change its value, while the second input is editable.</p>
+    </section>
+
+    <section>
+        <h2>2. `hidden` Attribute</h2>
+        <p>The <code>hidden</code> attribute is used to hide elements from the user. An element with this attribute will not be visible or interactable on the page, but it remains in the DOM and can be manipulated with JavaScript.</p>
+        <p>Example:</p>
+        <button onclick="toggleVisibility()">Toggle Hidden Element</button><br><br>
+        <div id="hidden-element" hidden>
+            <p>This is a hidden element.</p>
+        </div>
+
+        <script>
+            function toggleVisibility() {
+                var element = document.getElementById("hidden-element");
+                if (element.hidden) {
+                    element.hidden = false;
+                } else {
+                    element.hidden = true;
+                }
+            }
+        </script>
+    </section>
+
+    <section>
+        <h2>3. `sessionStorage`</h2>
+        <p><code>sessionStorage</code> is a web storage object that allows you to store data for the duration of the page session. This data is stored in the browser's memory and is cleared once the browser or tab is closed.</p>
+        <p>Example:</p>
+        <button onclick="saveData()">Save Data to Session</button><br><br>
+        <button onclick="loadData()">Load Saved Data</button><br><br>
+        <p id="session-data">No data saved yet.</p>
+
+        <script>
+            function saveData() {
+                sessionStorage.setItem("username", "Sivasubramani");
+                alert("Data saved to session!");
+            }
+
+            function loadData() {
+                var username = sessionStorage.getItem("username");
+                document.getElementById("session-data").innerText = username ? "Saved Data: " + username : "No data found in session.";
+            }
+        </script>
+    </section>
+
+    <section>
+        <h2>4. `refresh` Meta Tag</h2>
+        <p>The <code>refresh</code> attribute is used in a <code>&lt;meta&gt;</code> tag to automatically refresh or redirect the page after a specified interval.</p>
+        <p>Example:</p>
+        <pre>
+&lt;meta http-equiv="refresh" content="5"&gt;
+        </pre>
+        <p>Explanation: The above code would refresh the page every 5 seconds. This is often used in situations where you want to reload a page periodically or redirect after a certain time.</p>
+    </section>
+</body>
+</html>

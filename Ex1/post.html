@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Redux Overflow Form</h1>
-    <form action="welcome.html" method="get">
+    <form action="welcome.html" method="post">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" required><br><br>
 
@@ -72,6 +72,23 @@
                 document.getElementById("file-size").innerText = "";
             }
         }
+    </script>
+    <script>
+        document.getElementById('overflow-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Store form data in localStorage
+            localStorage.setItem('userData', JSON.stringify(data));
+
+            // Redirect to welcome page
+            window.location.href = 'welcome.html';
+        });
     </script>
 </body>
 </html>

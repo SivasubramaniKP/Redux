@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic HTML5 Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Basic HTML5 Page</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>Section 1: Introduction</h2>
+        <p>This is the first section of the page.</p>
+        <article>
+            <h3>Article 1</h3>
+            <p>This is an article within Section 1.</p>
+        </article>
+        <aside>
+            <p>This is an aside, usually related but not critical to the main content.</p>
+        </aside>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2: Main Content</h2>
+        <p>This is the second section of the page.</p>
+        <figure>
+            <img src="https://picsum.photos/200" alt="Sample Image" usemap="#image-map" />
+        <map name="image-map">
+            <area shape="rect" coords="0,0,200,200" alt="Top Left" href="https://www.google.com/" />
+            <area shape="circle" coords="400,100,50" alt="Circle Area" href="https://www.github.com" />
+            <area shape="poly" coords="250,150,300,300,200,300" alt="Polygon Area" href="https://boot.dev" />
+        </map>
+            <figcaption>Placeholder image</figcaption>
+        </figure>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sivasubramani. All rights reserved.</p>
+    </footer>
+
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <address>
+        Contact us at <a href="mailto:someone@example.com">someone@example.com</a>
+    </address>
+</body>
+</html>
