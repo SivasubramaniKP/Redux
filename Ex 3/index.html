@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Stack Overflow</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question-box { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .answers { display: none; margin-top: 10px; padding-left: 10px; border-left: 2px solid #007bff; }
+        .delete-btn { color: red; cursor: pointer; margin-left: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Stack Overflow Mini Forum</h2>
+    
+    <input type="text" id="questionInput" placeholder="Ask a question..." />
+    <button id="addQuestion">Post Question</button>
+
+    <div id="forumContainer"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#addQuestion").click(function () {
+                let questionText = $("#questionInput").val().trim();
+                if (questionText !== "") {
+                    let questionHtml = `
+                        <div class="question-box">
+                            <p><strong>${questionText}</strong>
+                                <span class="delete-btn">🗑 Delete</span>
+                            </p>
+                            <button class="toggleAnswers">Show/Hide Answers</button>
+                            <div class="answers">
+                                <input type="text" class="answerInput" placeholder="Write an answer..." />
+                                <button class="addAnswer">Post Answer</button>
+                                <ul class="answerList"></ul>
+                            </div>
+                        </div>`;
+                    $("#forumContainer").append(questionHtml);
+                    $("#questionInput").val(""); // Clear input
+                }
+            });
+
+            $(document).on("click", ".delete-btn", function () {
+                $(this).closest(".question-box").fadeOut(300, function () { $(this).remove(); });
+            });
+
+            $(document).on("click", ".toggleAnswers", function () {
+                $(this).next(".answers").slideToggle();
+            });
+
+            $(document).on("click", ".addAnswer", function () {
+                let answerText = $(this).siblings(".answerInput").val().trim();
+                if (answerText !== "") {
+                    $(this).siblings(".answerList").append(`<li>${answerText}</li>`);
+                    $(this).siblings(".answerInput").val(""); // Clear input
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
